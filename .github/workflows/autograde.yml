@@ -1,0 +1,44 @@
+name: MongoDB Shell Autograding
+
+on: [push]
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+
+    services:
+      mongo:
+        image: mongo:6
+        ports:
+          - 27017:27017
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install MongoDB Shell (mongosh)
+        run: |
+          curl -fsSL https://pgp.mongodb.com/server-6.0.asc | \
+            sudo gpg --dearmor -o /usr/share/keyrings/mongodb-server-6.0.gpg
+          echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] \
+            https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | \
+            sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+          sudo apt-get update
+          sudo apt-get install -y mongodb-mongosh
+
+      - name: Verify mongosh installation
+        run: mongosh --version
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Run student MongoDB commands
+        run: mongosh mongodb://localhost:27017 solution.mongodb || true
+
+      - name: Run autograder
+        run: node verify.js
