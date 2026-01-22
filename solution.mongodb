@@ -4,14 +4,14 @@
  
 
 db.students.insertOne({
-  _id: ObjectId("65a000000000000000000001"),
+
   name: "Rahul Patel",
   rollNo: 101,
   department: "IT"
 })
 
 db.students.insertOne({
-  _id: ObjectId("65a000000000000000000002"),
+ 
   name: "Neha Sharma",
   rollNo: 102,
   department: "CSE"
@@ -23,7 +23,7 @@ db.students.insertOne({
   ------------------------------------------------- */
 
   db.students.insertOne({
-  _id: ObjectId("65a000000000000000000003"),
+ 
   name: "Amit Verma",
   department: "IT",
   semester: 4,
@@ -39,7 +39,6 @@ db.students.insertOne({
      Exercise 3: Array of Simple Values
   ------------------------------------------------- */
 db.subjects.insertOne({
-  _id: ObjectId("65a000000000000000000004"),
   course_name: "B.Tech IT",
   subject_list: ["DBMS", "Operating Systems", "Computer Networks", "Algorithms"]
 })
@@ -52,7 +51,7 @@ db.subjects.insertOne({
 
 
 db.faculty.insertOne({
-  _id: ObjectId("65a000000000000000000005"),
+ 
   department: "Computer Science",
   teachers: [
     { name: "Dr. Mehul Shah", experience: 12 },
@@ -66,7 +65,7 @@ db.faculty.insertOne({
     Exercise 5: Explicit _id using ObjectId()
   ------------------------------------------------- */
     db.students.insertOne({
-  _id: ObjectId("65a000000000000000000006"),
+  _id: ObjectId(),
   name: "Kunal Mehta",
   department: "CSE",
   semester: 6,
@@ -101,19 +100,19 @@ db.students.insertOne({
 
 
 db.subjects.insert({
-  _id: ObjectId("65a000000000000000000008"),
+
   course_name: "B.Tech CSE",
   subject_list: ["Data Structures", "Discrete Mathematics"]
 })
 
 db.subjects.insert({
-  _id: ObjectId("65a000000000000000000009"),
+  
   course_name: "B.Tech ECE",
   subject_list: ["Signals", "Digital Electronics"]
 })
 
 db.subjects.insert({
-  _id: ObjectId("65a00000000000000000000a"),
+
   course_name: "B.Tech ME",
   subject_list: ["Thermodynamics", "Manufacturing Processes"]
 })
