@@ -1,4 +1,4 @@
- url=https://github.com/SCET-IT-TG/lab1-tirthpatelit23d2-gif/blob/main/solution.mongodb
+
 db = db.getSiblingDB("examDB");
 /* -------------------------------------------------
      Exercise 1: Database & Collection Creation
