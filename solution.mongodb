@@ -8,14 +8,14 @@ db.students.insertOne({
   name: "Rahul Patel",
   rollNo: 101,
   department: "IT"
-})
+});
 
 db.students.insertOne({
  
   name: "Neha Sharma",
   rollNo: 102,
   department: "CSE"
-})
+});
 
 
    /* -------------------------------------------------
@@ -28,7 +28,7 @@ db.students.insertOne({
   department: "IT",
   semester: 4,
   mobile: "9876543210"
-})
+});
 
 
 
@@ -41,7 +41,7 @@ db.students.insertOne({
 db.subjects.insertOne({
   course_name: "B.Tech IT",
   subject_list: ["DBMS", "Operating Systems", "Computer Networks", "Algorithms"]
-})
+});
 
 
 
@@ -57,7 +57,7 @@ db.faculty.insertOne({
     { name: "Dr. Mehul Shah", experience: 12 },
     { name: "Prof. Anita Desai", experience: 8 }
   ]
-})
+});
 
 
 
@@ -70,7 +70,7 @@ db.faculty.insertOne({
   department: "CSE",
   semester: 6,
   mobile: "9123456780"
-})
+});
 
 
    /* -------------------------------------------------
@@ -83,7 +83,7 @@ db.faculty.insertOne({
   department: "IT",
   semester: 5,
   mobile: "9000011111"
-})
+});
 
 db.students.insertOne({
   _id: ObjectId("65a000000000000000000007"),
@@ -91,7 +91,7 @@ db.students.insertOne({
   department: "IT",
   semester: 5,
   mobile: "9000011111"
-})
+});
 
 
    /* -------------------------------------------------
@@ -103,19 +103,19 @@ db.subjects.insert({
 
   course_name: "B.Tech CSE",
   subject_list: ["Data Structures", "Discrete Mathematics"]
-})
+});
 
 db.subjects.insert({
   
   course_name: "B.Tech ECE",
   subject_list: ["Signals", "Digital Electronics"]
-})
+});
 
 db.subjects.insert({
 
   course_name: "B.Tech ME",
   subject_list: ["Thermodynamics", "Manufacturing Processes"]
-})
+});
 
 
 /* -------------------------------------------------
