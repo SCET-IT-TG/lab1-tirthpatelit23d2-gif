@@ -24,14 +24,12 @@ db.students.insertOne({
      Exercise 2: Required Fields in students
   ------------------------------------------------- */
 
-  db.students.insertOne({
- 
-  name: "Amit Verma",
-  department: "IT",
-  semester: 4,
-  mobile: "9876543210"
+db.students.insertOne({ 
+    name: "patel saheb",
+    department: "IT",
+    semester: 5,
+    mobile: "9852555256"
 });
-
 
 
 
