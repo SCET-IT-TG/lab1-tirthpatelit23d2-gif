@@ -1,4 +1,4 @@
- 
+ url=https://github.com/SCET-IT-TG/lab1-tirthpatelit23d2-gif/blob/main/solution.mongodb
 db = db.getSiblingDB("examDB");
 /* -------------------------------------------------
      Exercise 1: Database & Collection Creation
@@ -6,17 +6,19 @@ db = db.getSiblingDB("examDB");
  
 
 db.students.insertOne({
-
   name: "Rahul Patel",
   rollNo: 101,
-  department: "IT"
+  department: "IT",
+  semester: 4,
+  mobile: "9876500001"
 });
 
 db.students.insertOne({
- 
   name: "Neha Sharma",
   rollNo: 102,
-  department: "CSE"
+  department: "CSE",
+  semester: 4,
+  mobile: "9876500002"
 });
 
 
@@ -34,7 +36,7 @@ db.students.insertOne({
   name: "Kundesi",
   department: "IT",
   semester: 5,
-  mobile: 9876543212
+  mobile: "9876543212"
 });
 
 
@@ -127,9 +129,3 @@ db.subjects.insert({
 /* -------------------------------------------------
      FINAL REPORT
   ------------------------------------------------- */
-
-
-
-
-  
-  
